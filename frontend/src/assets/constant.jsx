@@ -1,5 +1,33 @@
 export const projectData = [
   {
+    images: ["/photos/homie1.png", "/photos/homie2.png", "/photos/homie3.png", "/photos/homie4.png"],
+    title: "Homie College LMS",
+    description: "Applying React, Node.js, MongoDB, Prisma , Express, Tailwind",
+    moreDescription: "A LMS platform with role-based access and course management. Features enrollment tracking and progress monitoring.",
+    link: "https://model-clz.vercel.app/",
+    github: "https://github.com/MiKeY081/ModelClz",
+    technologies: [
+      { name: "React", level: 95 },
+      { name: "Node.js", level: 90 },
+      { name: "MongoDB", level: 85 },
+      { name: "Tailwind", level: 100 }
+    ],
+  },
+  {
+    images: ["/photos/climate1.png", "/photos/climate2.png", "/photos/climate3.png", "/photos/climate4.png"],
+    title: "ClimateGrow Analytics",
+    description: "Applying Next.js, Python, Data Visualization",
+    moreDescription: "Environmental dashboard with real-time visualizations with trained model for farmers. Combines climate data with agricultural insights.",
+    link: "https://climategrow.vercel.app/",
+    github: "https://github.com/MiKeY081/climategrow",
+    technologies: [
+      { name: "React", level: 90 },
+      { name: "Python", level: 85 },
+      { name: "Express", level: 95 },
+      { name: "Prisma", level: 80 }
+    ],
+  },
+  {
     images: [
       "/photos/circlesyncpage.jpeg",
       "/photos/circlesync2.jpeg",
@@ -95,32 +123,5 @@ export const projectData = [
       { name: "JavaScript", level: 95 },
     ],
   },
-  {
-    images: ["/photos/modelclz1.jpeg", "/photos/modelclz2.jpeg"],
-    title: "Model Class Platform",
-    description: "Applying React, Node.js, MongoDB",
-    moreDescription: "A LMS platform with role-based access and course management. Features enrollment tracking and progress monitoring.",
-    link: "https://model-clz.vercel.app/",
-    github: "https://github.com/MiKeY081/ModelClz",
-    technologies: [
-      { name: "React", level: 95 },
-      { name: "Node.js", level: 90 },
-      { name: "MongoDB", level: 85 },
-      { name: "Tailwind", level: 100 }
-    ],
-  },
-  {
-    images: ["/photos/climategrow1.jpeg", "/photos/climategrow2.jpeg"],
-    title: "ClimateGrow Analytics",
-    description: "Applying Next.js, Python, Data Visualization",
-    moreDescription: "Environmental dashboard with real-time visualizations. Combines climate data with agricultural insights.",
-    link: null, // Add live link if available
-    github: "https://github.com/MiKeY081/climategrow",
-    technologies: [
-      { name: "Next.js", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "Chart.js", level: 95 },
-      { name: "PostgreSQL", level: 80 }
-    ],
-  }
+  
 ];
