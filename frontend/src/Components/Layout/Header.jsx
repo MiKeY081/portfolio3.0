@@ -102,7 +102,7 @@ function Header() {
 
       <div className="hidden md:flex items-center justify-center flex-1">
         <ul className="flex gap-8 items-center">
-          <li className="headerlink bottomLine z-50">
+          <li className="headerlink bottomLine z-50 border-2 border-cyan-600 rounded px-2 py-1">
             <Terminal />
           </li>
        
