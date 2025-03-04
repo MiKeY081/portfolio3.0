@@ -1,0 +1,104 @@
+/* Tailwind apply styles */
+
+.headerlink {
+    @apply cursor-pointer transition-all duration-300;
+  }
+  
+  .bottomLine {
+    position: relative;
+    width: 100%;
+  }
+  
+  .bottomLine::before {
+    content: '';
+    height: 2px;
+    background-color: #86efac;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    z-index: 10;
+    transition: width 0.3s ease;
+  }
+  
+  .bottomLine:hover::before {
+    width: 100%;
+  }
+  
+  /* Ensure terminal icon isn’t affected by headerlink hover */
+  .headerlink:hover {
+    color: #86efac;
+  }
+  
+  /* Isolate terminal icon from headerlink hover */
+  .headerlink .terminal-icon {
+    color: inherit; /* Let motion control the color */
+  }
+  
+  /* Contact icons */
+  .contactIcons {
+    @apply text-blue-400 hover:text-blue-300 transition duration-300;
+    font-size: 1.5rem;
+    position: relative;
+  }
+  
+  .contactIcons::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #86efac;
+    transition: width 0.3s ease;
+  }
+  
+  .contactIcons:hover::after {
+    width: 100%;
+  }
+  
+  /* General styles */
+  body {
+    background-color: #111827;
+    color: #ffffff;
+  }
+  
+  .font-mono {
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  /* Scrollbar for terminal */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .scrollbar-thumb-green-500::-webkit-scrollbar-thumb {
+    background-color: #86efac;
+    border-radius: 4px;
+  }
+  
+  .scrollbar-track-gray-800::-webkit-scrollbar-track {
+    background-color: #1f2937;
+  }
+
+  @keyframes scanline {
+    from { background-position: 0 100%; }
+    to { background-position: 0 0; }
+  }
+  
+  .animate-scanline {
+    animation: scanline 6s linear infinite;
+  }
+  
+  .blinking-cursor {
+    animation: blink 1s step-end infinite;
+  }
+  
+  @keyframes blink {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+  }
