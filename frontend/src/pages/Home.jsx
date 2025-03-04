@@ -3,9 +3,10 @@ import Main from "../Components/Main";
 import About from "../Components/About";
 import Projects from "../Components/Projects";
 import Contact from "../Components/Contact";
-import ScrollToTopButton from "../assets/ScrollToTop";
 import Skills from "../Components/Skills";
 import { motion } from "framer-motion";
+import MenuEffect from "../assets/MenuEffect";
+import ScrollToTopButton from "../assets/ScrollToTop";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -38,6 +39,7 @@ const Home = () => {
       <Projects />
       <Contact />
       <ScrollToTopButton />
+      <MenuEffect/>
     </motion.div>
   );
 };

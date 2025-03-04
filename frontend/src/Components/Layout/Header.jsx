@@ -43,14 +43,15 @@ function Header() {
 
   const scrollOffset = -60;
 
+  
   return (
-    <motion.header
+    <motion.div
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
-      className="flex justify-between items-center text-white px-4 py-2 bg-gray-900/95 backdrop-blur-md sticky top-0 z-50 w-full border-b border-cyan-400/20 shadow-[0_0_30px_rgba(34,211,238,0.1)]"
+      className="flex justify-between items-center text-white px-4 py-2 bg-gray-900 sticky top-0 z-50 shadow-lg w-full"
     >
-      <RouterLink 
+          <RouterLink 
         to="/" 
         className="md:ml-4 ml-2 flex items-center z-50"
         onMouseEnter={() => setIsHoveringLogo(true)}
@@ -98,83 +99,28 @@ function Header() {
         </motion.div>
       </RouterLink>
 
-      <nav className="hidden md:flex items-center justify-center flex-1">
+
+      <div className="hidden md:flex items-center justify-center flex-1">
         <ul className="flex gap-8 items-center">
-          <motion.li
-            whileHover={{ scale: 1.2 }}
-            className="relative group"
-          >
-            <Terminal className="text-cyan-400 hover:text-cyan-300 transition-colors" />
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-cyan-400 w-0 group-hover:w-full transition-all duration-300" />
-          </motion.li>
-          
-          {['About', 'Projects', 'Contact'].map((item) => (
-            <motion.li
-              key={item}
-              variants={linkVariants}
-              whileHover="hover"
-              initial="initial"
-              className="relative headerlink"
-            >
-              <ScrollLink 
-                to={item.toLowerCase()} 
-                smooth 
-                offset={scrollOffset} 
-                className="cursor-pointer px-2 py-1"
-              >
-                {item}
-                <div className="absolute bottom-0 left-0 w-full h-[1px] bg-cyan-400/30 scale-x-0 origin-left group-hover:scale-x-100 transition-transform" />
-              </ScrollLink>
-              <div className="absolute -inset-2 blur-md opacity-0 hover:opacity-20 bg-cyan-400/30 transition-opacity pointer-events-none" />
-            </motion.li>
-          ))}
+          <li className="headerlink bottomLine z-50">
+            <Terminal />
+          </li>
+       
         </ul>
-      </nav>
+      </div>
 
       <div className="md:hidden flex items-center z-50">
         <motion.button
           whileTap={{ scale: 0.9 }}
           onClick={toggleMenu}
-          className="text-cyan-400 hover:text-cyan-300 text-2xl relative"
+          className="text-white text-2xl focus:outline-none"
         >
-          <span className="relative">
-            ☰
-            <AnimatePresence>
-              {isMenuOpen && (
-                <motion.span
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 0.3 }}
-                  exit={{ opacity: 0 }}
-                  className="absolute -inset-2 bg-cyan-400/20 rounded-full"
-                />
-              )}
-            </AnimatePresence>
-          </span>
+          ☰
         </motion.button>
       </div>
 
       <Menu isOpen={isMenuOpen} onClose={closeMenu} />
-      
-      {/* Animated scanline overlay */}
-      <motion.div
-        className="absolute inset-0 pointer-events-none overflow-hidden"
-        initial={{ opacity: 0.3 }}
-        animate={{ y: ["-100%", "100%"] }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        style={{
-          background: `linear-gradient(
-            to bottom,
-            transparent 0%,
-            rgba(34, 211, 238, 0.05) 50%,
-            transparent 100%
-          )`
-        }}
-      />
-    </motion.header>
+    </motion.div>
   );
 }
 
