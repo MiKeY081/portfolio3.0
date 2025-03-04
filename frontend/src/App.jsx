@@ -9,7 +9,6 @@ import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import AdminLogin from "./Admin/AdminLogin";
 import NotificationsPage from "./Admin/Notification";
-import ProjectDetails from "./pages/ProjectDetails";
 import Layout from "./Components/Layout/Layout";
 
 // Sample project data (move this to a separate file later if you want)
@@ -48,10 +47,6 @@ function App() {
           />
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/notifications" element={<NotificationsPage />} />
-          <Route
-            path="/project/:index"
-            element={<ProjectDetails projects={projects} />}
-          />
         </Route>
       </Routes>
     </motion.div>

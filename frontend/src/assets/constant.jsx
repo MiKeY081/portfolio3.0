@@ -99,8 +99,8 @@ export const projectData = [
     images: ["/photos/modelclz1.jpeg", "/photos/modelclz2.jpeg"],
     title: "Model Class Platform",
     description: "Applying React, Node.js, MongoDB",
-    moreDescription: "Model training platform with role-based access and course management. Features enrollment tracking and progress monitoring.",
-    link: null, // Add live link if available
+    moreDescription: "A LMS platform with role-based access and course management. Features enrollment tracking and progress monitoring.",
+    link: "https://model-clz.vercel.app/",
     github: "https://github.com/MiKeY081/ModelClz",
     technologies: [
       { name: "React", level: 95 },
