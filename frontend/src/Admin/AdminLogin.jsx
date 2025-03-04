@@ -57,7 +57,7 @@ const AdminLogin = () => {
                 SECURE IDENTIFIER:
               </label>
               <input
-                type="email"
+                type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full bg-gray-800/50 border border-cyan-400/30 rounded px-4 py-3 text-cyan-300 font-mono focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/50"
