@@ -4,7 +4,7 @@ export const projectData = [
     title: "Homie College LMS",
     description: "Applying React, Node.js, MongoDB, Prisma , Express, Tailwind",
     moreDescription: "A LMS platform with role-based access and course management. Features enrollment tracking and progress monitoring.",
-    link: "https://model-clz.vercel.app/",
+    link: "https://homie-clz.vercel.app/",
     github: "https://github.com/MiKeY081/ModelClz",
     technologies: [
       { name: "React", level: 95 },
