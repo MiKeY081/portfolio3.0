@@ -11,7 +11,7 @@ const About = () => {
   };
 
   return (
-    <div className="relative py-16 px-4 sm:px-8 lg:px-16 bg-gray-900/80 backdrop-blur-md rounded-xl border border-cyan-400/20 shadow-[0_0_60px_rgba(34,211,238,0.1)] overflow-hidden" id="about">
+    <div className="relative py-16 px-4 sm:px-8 lg:px-16 bg-gray-900/80 backdrop-blur-md rounded-xl border border-cyan-400/20 shadow-[0_0_60px_rgba(34,211,238,0.1)] " id="about">
       {/* Holographic Grid Background */}
       <div className="absolute inset-0 opacity-10 z-0">
         {[...Array(20)].map((_, i) => (

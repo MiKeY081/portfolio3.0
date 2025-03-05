@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX } from "react-icons/fi";
+import { useNavigate } from "react-router-dom";
 
 const MenuEffect = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate = useNavigate()
   const menuItems = [
     { name: "sysinfo --about", path: "/about" },
     { name: "Skill Matrix", path: "/skills" },
@@ -52,6 +53,11 @@ const MenuEffect = () => {
     })
   };
 
+  const handleClick = (e,path) => {
+    e.preventDefault();
+    console.log(path)
+    navigate(path)
+  }
   return (
     <div className="fixed top-5 right-5 z-50 ">
       <button
@@ -107,9 +113,9 @@ const MenuEffect = () => {
                     className="font-mono text-cyan-300 cursor-pointer
                       hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]"
                   >
-                    <a href={item.path} className="block px-4 py-2">
+                    <div onClick={(e)=>{handleClick(e, item.path)}} className="block px-4 py-2">
                       {">_ "}{item.name}
-                    </a>
+                    </div>
                   </motion.li>
                 ))}
               </ul>
