@@ -13,6 +13,13 @@ const Projects = () => {
 
   return (
     <div className="min-h-screen bg-gray-900 p-8">
+  <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        className="text-4xl sm:text-5xl font-bold mb-12 text-center text-cyan-400 font-mono"
+      >
+        > Misson log --projects
+      </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {projectData.map((project, index) => (
           <motion.div

@@ -64,7 +64,7 @@ export default function Terminal() {
       <motion.div
         whileHover={{ scale: 1.2, color: "#86efac" }}
         whileTap={{ scale: 0.9 }}
-        className="text-2xl text-white cursor-pointer z-50 relative terminal-icon"
+        className="text-2xl text-cyan-400 hover:text-cyan-300 cursor-pointer z-50 relative terminal-icon"
       >
         <FaTerminal
           onClick={handleOpen}
@@ -83,7 +83,7 @@ export default function Terminal() {
             variants={terminalVariants}
             initial="hidden"
             animate="visible"
-            className="bg-gray-900 text-green-500 max-h-[80vh] md:w-[700px] w-[90vw] flex flex-col p-5 rounded-lg shadow-lg shadow-green-500/20 font-mono"
+            className="bg-gray-900 text-cyan-400 hover:text-cyan-300 max-h-[80vh] md:w-[700px] w-[90vw] flex flex-col p-5 rounded-lg shadow-lg shadow-green-500/20 font-mono"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-2 text-lg flex justify-between items-center">
@@ -99,18 +99,18 @@ export default function Terminal() {
             <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-green-500 scrollbar-track-gray-800 max-h-[calc(80vh-80px)]">
               {history.map((entry, index) => (
                 <div key={index} className="mb-2">
-                  <div className="text-base text-green-400">
+                  <div className="text-base text-cyan-400 hover:text-cyan-300">
                     madhu@portfolio:~$ {entry.command}
                   </div>
-                  <div className="text-sm text-gray-300">{entry.output}</div>
+                  <div className="text-sm text-cyan-400 hover:text-cyan-300">{entry.output}</div>
                 </div>
               ))}
               <div className="flex items-center mt-2 sticky bottom-0 bg-gray-900">
-                <span className="text-base text-green-400">madhu@portfolio:~$ </span>
+                <span className="text-base text-cyan-400 hover:text-cyan-300">madhu@portfolio:~$ </span>
                 <input
                   ref={inputRef}
                   type="text"
-                  className="bg-transparent border-none outline-none text-base flex-1 ml-2 text-green-500 placeholder-gray-600"
+                  className="bg-transparent border-none outline-none text-base flex-1 ml-2 text-cyan-400 hover:text-cyan-300 placeholder-gray-600"
                   value={command}
                   onChange={(e) => setCommand(e.target.value)}
                   onKeyDown={handleCommand}

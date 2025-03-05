@@ -6,9 +6,9 @@ const MenuEffect = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const menuItems = [
-    { name: "Bio-Scan", path: "/about" },
+    { name: "sysinfo --about", path: "/about" },
     { name: "Skill Matrix", path: "/skills" },
-    { name: "Mission Log", path: "/projects" },
+    { name: "Mission --Log", path: "/projects" },
     { name: "Transmit Signal", path: "/contact" },
   ];
 
