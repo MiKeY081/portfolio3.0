@@ -16,7 +16,7 @@ const Home = () => {
   }, []);
 
   return loading ? (
-    <div className="grid place-items-center max-w-screen h-screen overflow-hidden bg-gray-900">
+    <div className="grid place-items-center w-screen h-screen bg-gray-900">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -31,7 +31,7 @@ const Home = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="scroll-smooth max-w-screen min-h-screen bg-gray-900 "
+      className="scroll-smooth w-screen min-h-screen bg-gray-900"
     >
       <Main />
       <About />
