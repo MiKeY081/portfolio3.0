@@ -14,9 +14,8 @@ const Main = () => {
     },
     initial: { scale: 1, color: "#ffffff" },
   };
-
   return (
-    <div className="min-h-screen bg-gray-900 flex lg:flex-row-reverse flex-col items-center justify-center relative overflow-hidden px-4 sm:px-20">
+    <div className=" overflow-hidden bg-gray-900 flex lg:flex-row-reverse flex-col  relative  px-4 lg:px-20 py-16">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-10 z-0">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMWZmZmZmIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=')]" />
@@ -47,7 +46,7 @@ const Main = () => {
       </motion.div>
 
       {/* Content Section */}
-      <div className="lg:w-1/2 font-mono space-y-8 relative z-10 py-16">
+      <div className="lg:w-1/2 font-mono space-y-8 relative z-10 lg:py-16 py-8 ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

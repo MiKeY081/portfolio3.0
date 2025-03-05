@@ -2,15 +2,12 @@ import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import Menu from "../Menu";
 import Terminal from "../../assets/Terminal";
+import MenuEffect from "../../assets/MenuEffect";
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHoveringLogo, setIsHoveringLogo] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const closeMenu = () => setIsMenuOpen(false);
 
   const linkVariants = {
     hover: { 
@@ -49,7 +46,7 @@ function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
-      className="flex justify-between items-center text-white px-4 py-2 bg-gray-900 sticky top-0 z-50 shadow-lg w-full"
+      className="flex justify-between items-center text-white px-4 py-2 bg-gray-900 sticky top-0 z-50 shadow-lg max-w-screen w-full"
     >
           <RouterLink 
         to="/" 
@@ -102,24 +99,12 @@ function Header() {
 
       <div className="hidden md:flex items-center justify-center flex-1">
         <ul className="flex gap-8 items-center">
-          <li className="headerlink bottomLine z-50 border-2 border-cyan-600 rounded px-2 py-1">
+          <li className="headerlink bottomLine z-50 border-2 border-cyan-600 rounded px-2 py-1 ">
             <Terminal />
           </li>
        
         </ul>
       </div>
-
-      <div className="md:hidden flex items-center z-50">
-        <motion.button
-          whileTap={{ scale: 0.9 }}
-          onClick={toggleMenu}
-          className="text-white text-2xl focus:outline-none"
-        >
-          ☰
-        </motion.button>
-      </div>
-
-      <Menu isOpen={isMenuOpen} onClose={closeMenu} />
     </motion.div>
   );
 }

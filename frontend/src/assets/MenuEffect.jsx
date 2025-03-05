@@ -53,7 +53,7 @@ const MenuEffect = () => {
   };
 
   return (
-    <div className="fixed top-5 right-5 z-50">
+    <div className="fixed top-5 right-5 z-50 ">
       <button
         onClick={() => {
           
@@ -69,13 +69,13 @@ const MenuEffect = () => {
             initial="closed"
             animate="open"
             exit="closed"
-            className="absolute right-0 top-12"
+            className="absolute right-0 top-12 "
           >
             {/* Hologram Backdrop */}
             <motion.div
               variants={hologramVariants}
               className="relative bg-black/90 backdrop-blur-lg rounded-lg p-8
-                border-2 border-cyan-400/50 shadow-lg shadow-cyan-400/20"
+                border-2 border-cyan-400/50 shadow-lg shadow-cyan-400/20 w-[300px]"
             >
               {/* Grid Lines */}
               <div className="absolute inset-0 overflow-hidden rounded-lg">
