@@ -46,11 +46,11 @@ function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
-      className="flex fixed justify-between items-center text-white px-4 py-2 bg-gray-900  top-0 z-50 shadow-lg max-w-screen w-full gap-6 "
+      className="flex fixed justify-between items-center text-white px-4 py-2 bg-gray-900  top-0 z-50 shadow-lg max-w-screen w-full gap-2"
     >
           <RouterLink 
         to="/" 
-        className="md:ml-4 ml-2 flex items-center z-50"
+        className="md:ml-4  flex items-center z-50"
         onMouseEnter={() => setIsHoveringLogo(true)}
         onMouseLeave={() => setIsHoveringLogo(false)}
       >
@@ -99,12 +99,12 @@ function Header() {
 
       <div className=" md:flex items-center justify-center flex-1">
         <ul className="flex gap-8 items-center">
-          <li className="headerlink bottomLine z-50 border-2 border-cyan-600 rounded px-2 py-1 w-fit">
+          <li className="headerlink bottomLine z-50 border-2 border-cyan-600 rounded px-2 py-1 w-fit hover:border-[#86efac]">
             <Terminal />
           </li>
         </ul>
       </div>
-              <MenuEffect />
+     <MenuEffect />
     </motion.div>
   );
 }

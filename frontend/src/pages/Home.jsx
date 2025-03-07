@@ -21,7 +21,7 @@ const Home = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
-        className="text-green-500 font-mono text-xl"
+        className="text-cyan-400 font-mono text-lg md:text-2xl px-4"
       >
         > Booting system... [MadhuOS v1.0]
       </motion.div>

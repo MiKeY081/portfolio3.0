@@ -28,6 +28,7 @@ const Projects = () => {
                      whileInView={{ opacity: 1, x: 0 }}
                      transition={{ duration: 0.5, delay: index * 0.1 }}
                      className="group relative p-4 bg-gray-900/50 rounded-xl border border-cyan-400/20 hover:border-cyan-400/40 transition-colors"
+                     onClick={() => setSelectedProject(project)}
                    >
             <div className="h-64 overflow-hidden rounded-xl">
               <img

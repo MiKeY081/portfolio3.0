@@ -64,7 +64,7 @@ export default function Terminal() {
       <motion.div
         whileHover={{ scale: 1.2, color: "#86efac" }}
         whileTap={{ scale: 0.9 }}
-        className="text-2xl text-cyan-400 hover:text-cyan-300 cursor-pointer z-50 relative terminal-icon"
+        className="text-sm text-cyan-400 hover:text-cyan-300 cursor-pointer z-50 relative terminal-icon"
       >
         <FaTerminal
           onClick={handleOpen}

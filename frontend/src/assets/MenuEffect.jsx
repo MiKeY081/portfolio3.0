@@ -59,7 +59,7 @@ const MenuEffect = () => {
     navigate(path)
   }
   return (
-    <div className="fixed top-5 right-5 z-50 ">
+    <div className="">
       <button
         onClick={() => {
           
