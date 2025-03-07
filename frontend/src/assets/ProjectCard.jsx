@@ -50,7 +50,7 @@ export function Card({ project, index }) {
       viewport={{ once: true, margin: "0px 0px -100px 0px" }}
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
-      className="relative h-[300px] w-[300px] md:w-[500px] lg:w-[500px] rounded-lg cursor-pointer overflow-hidden border border-cyan-400/20 bg-gray-900/50 backdrop-blur-sm"
+      className="relative lg:h-[300px] w-[300px] md:w-[500px] lg:w-[500px] rounded-lg cursor-pointer overflow-hidden border border-cyan-400/20 bg-gray-900/50 backdrop-blur-sm  sm:h-64"
     >
       {/* Holographic Grid Backdrop */}
       <div className="absolute inset-0 z-0 opacity-20">

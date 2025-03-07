@@ -5,3 +5,8 @@
 body{
   overflow-x: hidden;
 }
+
+/* Example custom breakpoints */
+@media (max-width: 640px) { /* Mobile */ }
+@media (min-width: 641px) and (max-width: 1024px) { /* Tablet */ }
+@media (min-width: 1025px) { /* Desktop */ }

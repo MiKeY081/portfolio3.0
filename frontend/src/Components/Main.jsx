@@ -108,9 +108,9 @@ const Main = () => {
               boxShadow: "0 0 25px rgba(94, 234, 212, 0.3)"
             }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block px-8 py-3 bg-cyan-400/20 border-2 border-cyan-400 rounded-lg text-cyan-300 hover:bg-cyan-400/30 transition-all duration-300 group"
+            className="inline-block md:px-8 px-4 md:py-3 py-2 bg-cyan-400/20 border-2 border-cyan-400 rounded-lg text-cyan-300 hover:bg-cyan-400/30 transition-all text-xl  duration-300 md:group"
           >
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 ">
               <span className="group-hover:animate-pulse">⨳</span>
               INITIATE_CONTACT_PROTOCOL
             </span>

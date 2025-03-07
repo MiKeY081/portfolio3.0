@@ -87,7 +87,7 @@ export default function Terminal() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-2 text-lg flex justify-between items-center">
-              <span>> MadhuOS Terminal v1.0</span>
+              <span> > MadhuOS Terminal v1.0</span>
               <motion.button
                 whileHover={{ scale: 1.1, color: "#ff5555" }}
                 onClick={handleClose}
@@ -110,7 +110,7 @@ export default function Terminal() {
                 <input
                   ref={inputRef}
                   type="text"
-                  className="bg-transparent border-none outline-none text-base flex-1 ml-2 text-cyan-400 hover:text-cyan-300 placeholder-gray-600"
+                  className="bg-transparent border-none outline-none text-base flex-1 ml-2 text-cyan-400 hover:text-cyan-300 placeholder-gray-600 w-full max-w-[400px]"
                   value={command}
                   onChange={(e) => setCommand(e.target.value)}
                   onKeyDown={handleCommand}
