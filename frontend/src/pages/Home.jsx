@@ -39,7 +39,6 @@ const Home = () => {
       <Projects />
       <Contact />
       <ScrollToTopButton />
-      <MenuEffect/>
     </motion.div>
   );
 };

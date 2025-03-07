@@ -55,7 +55,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="relative py-20 px-4 bg-gray-900 border-b border-cyan-400/20" id="contact">
+    <div className="relative py-20 px-4 bg-gray-900 border-b border-cyan-400/20 flex justify-center items-center flex-col" id="contact">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-10">
         {[...Array(30)].map((_, i) => (
@@ -79,16 +79,17 @@ const Contact = () => {
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        className="text-4xl sm:text-5xl font-bold mb-12 text-center text-cyan-400 font-mono"
+        className="text-4xl sm:text-5xl font-bold mb-12 text-center text-cyan-400 font-mono "
       >
-        > initiate_contact_protocol
+        > initiate_contact_ protocol
       </motion.h2>
 
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        className="max-w-2xl mx-auto bg-gray-900/50 backdrop-blur-sm rounded-xl border border-cyan-400/20 p-8 shadow-[0_0_40px_rgba(34,211,238,0.1)]"
-      >
+    < motion.div
+                 initial={{ opacity: 0, x: -50 }}
+                 whileInView={{ opacity: 1, x: 0 }}
+                 transition={{ duration: 0.5, delay: 0.2 }}
+                 className="max-w-2xl  relative p-4 bg-gray-900/50 rounded-xl border border-cyan-400/20 hover:border-cyan-400/40 transition-colors"
+               >
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
             <label className="text-cyan-300 font-mono">$ user_identity:</label>
@@ -103,7 +104,7 @@ const Contact = () => {
           </div>
 
           <div className="space-y-2">
-            <label className="text-cyan-300 font-mono">$ transmission_frequency:</label>
+            <label className="text-cyan-300 font-mono flex whitespace-nowrap">$ transmission_frequency:</label>
             <input
               name="email"
               type="email"

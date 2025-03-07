@@ -45,7 +45,7 @@ const Footer = () => {
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="relative bg-gray-900/80 backdrop-blur-md border-t border-cyan-400/20  py-4 max-h-7"
+      className="relative bg-gray-900/80 backdrop-blur-md border-t border-cyan-400/20  py-4 max-h-10 "
     >
       {/* Holographic Grid */}
       <div className="absolute inset-0 opacity-10 z-0">

@@ -12,7 +12,7 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <div className="min-h-screen bg-gray-900 p-8">
+    <div className="min-h-screen bg-gray-900 p-8 my-8">
   <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -22,14 +22,13 @@ const Projects = () => {
       </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4">
         {projectData.map((project, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="relative group cursor-pointer"
-            onClick={() => setSelectedProject(project)}
-          >
+         <motion.div
+                     key={index}
+                     initial={{ opacity: 0, x: -50 }}
+                     whileInView={{ opacity: 1, x: 0 }}
+                     transition={{ duration: 0.5, delay: index * 0.1 }}
+                     className="group relative p-4 bg-gray-900/50 rounded-xl border border-cyan-400/20 hover:border-cyan-400/40 transition-colors"
+                   >
             <div className="h-64 overflow-hidden rounded-xl">
               <img
                 src={project.images[0]}

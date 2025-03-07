@@ -46,7 +46,7 @@ function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", stiffness: 120, damping: 20 }}
-      className="flex justify-between items-center text-white px-4 py-2 bg-gray-900 sticky top-0 z-50 shadow-lg max-w-screen w-full"
+      className="flex fixed justify-between items-center text-white px-4 py-2 bg-gray-900  top-0 z-50 shadow-lg max-w-screen w-full gap-6 "
     >
           <RouterLink 
         to="/" 
@@ -97,14 +97,14 @@ function Header() {
       </RouterLink>
 
 
-      <div className="hidden md:flex items-center justify-center flex-1">
+      <div className=" md:flex items-center justify-center flex-1">
         <ul className="flex gap-8 items-center">
-          <li className="headerlink bottomLine z-50 border-2 border-cyan-600 rounded px-2 py-1 ">
+          <li className="headerlink bottomLine z-50 border-2 border-cyan-600 rounded px-2 py-1 w-fit">
             <Terminal />
           </li>
-       
         </ul>
       </div>
+              <MenuEffect />
     </motion.div>
   );
 }

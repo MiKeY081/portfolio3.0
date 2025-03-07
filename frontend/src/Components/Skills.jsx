@@ -50,7 +50,7 @@ const Skills = () => {
             key={skill.name}
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
             className="group relative p-4 bg-gray-900/50 rounded-xl border border-cyan-400/20 hover:border-cyan-400/40 transition-colors"
           >
             <div className="flex items-center gap-4">
@@ -62,7 +62,7 @@ const Skills = () => {
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: `${skill.level}%` }}
-                  transition={{ duration: 1, delay: index * 0.2 }}
+                  transition={{ duration: 1, delay: index * 0.1 }}
                   className="h-full bg-gradient-to-r from-cyan-400 to-cyan-600 rounded-full shadow-[0_0_15px_rgba(34,211,238,0.3)]"
                 />
               </div>
